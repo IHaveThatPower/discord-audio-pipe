@@ -6,3 +6,7 @@ token.txt
 main.py
 build/main
 .vscode
+# Built dir
+discord-audio-pipe/
+# logging file
+logging

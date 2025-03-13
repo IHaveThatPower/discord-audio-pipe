@@ -158,15 +158,16 @@ async def main(bot):
 
 # run program
 bot = discord.Client(intents=discord.Intents.default())
-loop = asyncio.get_event_loop_policy().get_event_loop()
+# loop = asyncio.get_event_loop_policy().get_event_loop()
+asyncio.run(main(bot))
 
-try:
-    loop.run_until_complete(main(bot))
-
-except KeyboardInterrupt:
-    print("Exiting...")
-    loop.run_until_complete(bot.close())
-
-    # this sleep prevents a bugged exception on Windows
-    loop.run_until_complete(asyncio.sleep(1))
-    loop.close()
+# try:
+#     loop.run_until_complete(main(bot))
+# 
+# except KeyboardInterrupt:
+#     print("Exiting...")
+#     loop.run_until_complete(bot.close())
+# 
+#     # this sleep prevents a bugged exception on Windows
+#     loop.run_until_complete(asyncio.sleep(1))
+#     loop.close()
